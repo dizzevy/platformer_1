@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float HorizontalMove = 0f;
     private bool FacingRight = true;
+    private float health = 2f;
 
     [Header("Player Movement Setting")]
     [Range(0, 4f)] public float speed = 1f;
@@ -20,6 +21,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Animation Settings")]
     public Animator animator;
+    
+
+
+    
+
 
 
     void Start() 
@@ -54,6 +60,11 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("jump", false);
         }
+
+        if(health == 0)
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
     }
 
     void FixedUpdate() 
@@ -83,6 +94,18 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Enemy"))
+        {
+            takeDamage();
+        }
+    }
+
+    private void takeDamage(){
+        health --; 
+        Debug.Log("da");
     }
 
 }
