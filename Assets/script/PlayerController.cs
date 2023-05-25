@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float HorizontalMove = 0f;
     private bool FacingRight = true;
-    private float health = 2f;
+    private float health = 1f;
 
     [Header("Player Movement Setting")]
     [Range(0, 4f)] public float speed = 1f;
@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
        Vector2 targetVelocity = new Vector2(HorizontalMove * 10f, rb.velocity.y); 
        rb.velocity = targetVelocity;
        CheckGround();
+       
     }
 
     private void Flip()
@@ -105,7 +106,14 @@ public class PlayerController : MonoBehaviour
 
     private void takeDamage(){
         health --; 
-        Debug.Log("da");
+        Debug.Log("damage+");
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Enemy")
+        {
+            takeDamage();
+        }
     }
 
 }
