@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc99309af6821d94fba0de7ecf2d390a
+guid: 7157e7ffd527a7d488b3b75d025dea49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-0010_0
+      name: Sprite-0122_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 4
-        width: 44
-        height: 50
+        y: 1
+        width: 41
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7233ccdafa8aed34b9f4ff99f9b7f73a
-      internalID: -438189876
+      spriteID: ac97b84582e769c48854ce49bbfa3186
+      internalID: 1169497
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite-0010_0: -438189876
+      Sprite-0122_0: 1169497
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

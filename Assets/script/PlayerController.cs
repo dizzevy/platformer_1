@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour
     private bool FacingRight = true;
     private float health = 1f;
 
-    public static PlayerController instance;
-
-    public Rigidbody2D PlayerRigid;
 
     [Header("Player Movement Setting")]
     [Range(0, 4f)] public float speed = 1f;
@@ -34,12 +31,6 @@ public class PlayerController : MonoBehaviour
 
     void Start() 
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-
-        
         rb = GetComponent<Rigidbody2D>();
     }
 
