@@ -117,4 +117,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D other) {
+        if(other.gameObject.tag == "platform")
+        {
+            this.transform.parent = other.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        if(other.gameObject.tag == "platform")
+        {
+            this.transform.parent = null;
+        }
+    }
+
 }
